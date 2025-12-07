@@ -1,0 +1,558 @@
+.navbar {
+  background-color:   #113ca8;
+background: linear-gradient(90deg,rgba(17, 60, 168, 1) 0%, rgba(0, 46, 164, 1) 100%);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  font-family: "League Spartan";
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding: 0;
+  height: 80px;
+  box-shadow: 1px 10px 61px 0px rgba(0,0,0,0.75);
+  border-radius: 0 0 25px 25px;
+  margin-bottom: 13px;
+}
+
+.nav-container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 30px;
+  
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #F4B942;
+  letter-spacing: 1px;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-menu {
+  display: flex;
+  list-style: none;
+  gap: 30px;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+  font-size: 1.2rem;
+}
+
+
+.nav-link {
+    color: white;
+    text-decoration: none;
+    font-size:1.2rem;
+    
+    position: relative;
+    transition: color 0.3s ease;
+}
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #F4B942;
+    transition: width 0.3s ease;
+}
+
+.nav-link:hover::after {
+    width: 100%;
+}
+
+.nav-link:hover {
+    color: #F4B942;
+}
+
+.nav-link-button {
+    background-color: #057DBD;
+    color: white;
+    padding: 10px 25px;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    display: inline-block;
+}
+
+.nav-link-button:hover {
+    background-color: #F4B942;
+    transform: scale(1.05);
+}
+
+@media (max-width: 768px) {
+    .nav-menu {
+        gap: 15px;
+    }
+    
+    .logo {
+        font-size: 1.2rem;
+    }
+
+    .nav-link {
+        font-size: 0.9rem;
+    }
+}
+    body {
+        background-color: #dedede;
+        margin:0;
+    }
+
+    #YEpic{
+        width: 98%;
+        display: flex;
+        margin-left: auto;
+        margin-right: auto;
+        border-radius: 25px;
+        box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.25);
+    }
+    #YE_Description{
+        line-height: 1.6;
+        font-size: 1.3rem;
+        text-align:center;
+        font-family: "Urbanist";
+        margin-top: 20px;
+        font-weight: 600;
+
+    }
+    .chart-intro{
+    line-height: 1.8;
+    font-size: 1.2rem;
+    text-align: justify;
+    text-indent: 80px;
+    max-width: 1200px;
+    margin-top: 5px;
+    margin-left: auto;
+    margin-right: auto;
+    }
+    .chart-container {
+        background-color: #f1f1f1;
+        box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.25);
+        border-radius: 20px;
+        display: flex;
+        align-items: center;
+        gap: 75px;
+        flex-wrap: wrap;
+        justify-content: center;
+        margin-bottom: 1%;
+        padding: 10px;
+    }
+
+    .pie-chart-wrapper {
+        position: center;
+    }
+
+    .pie-chart {
+        width: 300px;
+        height: 300px;
+        margin-right:50%;
+        border-radius: 50%;
+        position: relative;
+        cursor: pointer;
+        background: conic-gradient(
+            #003049 0% 26.7%,
+            #D62828 26.7% 60.3%,
+            #FB6C13 60.3% 83%,
+            #F9C80E 83% 100%
+        );
+        box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        animation: rotateIn 1s ease-out;
+    }
+
+    @keyframes rotateIn {
+        from {
+            transform: rotate(-180deg) scale(0.5);
+            opacity: 0;
+        }
+        to {
+            transform: rotate(0deg) scale(1);
+            opacity: 1;
+        }
+    }
+
+    .pie-chart:hover {
+        transform: scale(1.05);
+        box-shadow: 0 15px 40px rgba(0,0,0,0.25);
+    }
+
+    .chart-center {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+        z-index: 5;
+        pointer-events: none;
+        background: white;
+        width: 140px;
+        height: 140px;
+        border-radius: 20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        box-shadow: 0 0 20px rgba(0,0,0,0.1);
+    }
+
+    .chart-percentage {
+        font-size: 2.5rem;
+        font-weight: bold;
+        color: #1a1a1a;
+        line-height: 1;
+    }
+
+    .chart-label {
+        font-size: 0.9rem;
+        color: #666;
+        font-weight: bold;
+        margin-top: 5px;
+    }
+
+    .chart-text {
+        max-width: 500px;
+        font-size: 1.1rem;
+        line-height: 1.8;
+        color: #1a1a1a;
+    }
+
+    .chart-details {
+        position: absolute;
+        top: 50%;
+        left: 120%;
+        transform: translateY(-50%);
+        background: rgba(255, 255, 255, 0.98);
+        padding: 25px 30px;
+        border-radius: 15px;
+        opacity: 0;
+        pointer-events: none;
+        transition: opacity 0.3s ease, left 0.3s ease;
+        box-shadow: 0 10px 40px rgba(0,0,0,0.3);
+        min-width: 320px;
+        z-index: 20;
+        font-family: "Urbanist";
+    }
+
+    .pie-chart:hover .chart-details {
+        opacity: 1;
+        left: 110%;
+    }
+
+    .chart-details h3 {
+        margin-bottom: 20px;
+        color: #1a1a1a;
+        font-size: 1.3rem;
+        text-align: center;
+        border-bottom: 2px solid #E5A832;
+        padding-bottom: 10px;
+    }
+
+    .detail-item {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 12px 0;
+        border-bottom: 1px solid #eee;
+    }
+
+    .detail-item:last-child {
+        border-bottom: none;
+    }
+
+    .detail-label {
+        font-weight: bold;
+        color: #333;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .detail-color {
+        width: 20px;
+        height: 20px;
+        border-radius: 4px;
+        display: inline-block;
+    }
+
+    .detail-value {
+        color: #666;
+        font-weight: 500;
+    }
+
+    .chart-legend {
+        margin-top: 30px;
+    }
+
+    .legend-item {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        margin-bottom: 12px;
+        font-size: 0.95rem;
+    }
+
+    .legend-color {
+        width: 30px;
+        height: 20px;
+        border-radius: 4px;
+        flex-shrink: 0;
+    }
+
+    .legend-text {
+        color: #333;
+        font-family: "urbanist";
+        font-weight: bold;
+    }
+
+    .legend-percentage {
+        color: #666;
+        margin-left: auto;
+        font-weight: bold;
+        font-family: Urbanist;
+    }
+
+    @media (max-width: 768px) {
+        .chart-container {
+            flex-direction: column;
+        }
+    }
+
+.empowerment-section {
+
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.section-title {
+    font-size: 1.8rem;
+    font-weight: bold;
+    margin-bottom: 2rem;
+    color: #1a1a1a;
+}
+
+.boxes-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    margin-top: 3rem;
+    max-width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+
+}
+
+.blue-box {
+    background-color: #D62828;
+    text-indent: 0px;
+    border-radius: 10px;
+    text-align: center;
+    color: white;
+    min-height: 200px;
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+    box-shadow: 1px 0px 22px -7px rgba(0,0,0,0.75);
+    font-family: Urbanist;
+}
+.box-images{
+    width: 110%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 15px;
+    filter: drop-shadow( 0 10px 30px rgba(0,0,0,0.5));
+}
+.blue-box:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+}
+
+.box-front {
+    padding: 60px 30px;
+    font-size: 1.5rem;
+    font-weight: bold;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: transform 0.4s ease;
+    position: relative;
+    z-index: 2;
+}
+
+.blue-box:hover .box-front {
+    transform: translateY(-100%);
+}
+
+.blue-box-icon {
+    font-size: 3rem;
+    margin-bottom: 15px;
+}
+
+.box-description {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 30px;
+    background-color: #D62828;
+    transform: translateY(100%);
+    transition: transform 0.4s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 200px;
+}
+
+.blue-box:hover .box-description {
+    transform: translateY(0);
+}
+
+.box-description p {
+    font-size: 1rem;
+    line-height: 1.6;
+    margin: 0;
+    color: white;
+}
+
+.bottom-text {
+    margin-top: 3rem;
+    font-size: 1.2rem;
+    line-height: 1.8;
+    color: #333;
+    font-family: "Urbanist", sans-serif;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: justify;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+footer {
+            background: linear-gradient(135deg, #e63946 0%, #d62828 50%, #c1121f 100%);
+            color: white;
+            padding: 60px 40px 5px 0px;
+            border-radius: 25px 25px 0 0;
+            max-height: auto;
+    
+        }
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 3fr 1fr;
+            gap: 80px;
+            margin-bottom: 50px;
+        }
+        .footer-left {
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+        }
+        .logo {
+            width:300px;
+            height: auto;
+        
+        }
+        .about-section h2 {
+            font-family: 'League Spartan', sans-serif;
+            margin-bottom: 20px;
+            letter-spacing: 1px;
+        }
+        .about-section p {
+            font-family: 'Urbanist', sans-serif;
+            line-height: 1.8;
+            opacity: 0.95;
+        }
+        .footer-right {
+            display: flex;
+            flex-direction: column;
+            gap: 40px;
+            font-size: smaller;
+        }
+        .contacts-section h2,
+        .social-section h2 {
+            font-family: 'League Spartan', sans-serif;
+            margin-bottom: 20px;
+            letter-spacing: 1px;
+        }
+        .contact-list {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+
+        }
+        .contact-list li {
+            font-family: 'Urbanist', sans-serif;
+            font-size: 18px;
+            letter-spacing: 0.5px;
+        }
+
+        .social-icons {
+            display: flex;
+            gap: 20px;
+        }
+
+        .social-icons a {
+            width: 50px;
+            height: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: transform 0.3s ease, opacity 0.3s ease;
+        }
+
+        .social-icons a:hover {
+            transform: translateY(-5px);
+            opacity: 0.8;
+        }
+
+        .social-icons svg {
+            width: 30px;
+            height: 30px;
+            fill: white;
+        }
+
+        .footer-bottom {
+            border-top: 1px solid rgba(255, 255, 255, 0.3);
+            padding-top: 20px;
+            text-align: center;
+        }
+
+        .footer-bottom p {
+            font-family: 'League Spartan', sans-serif;
+            font-weight: 700;
+            font-size: 14px;
+            letter-spacing: 1px;
+        }
+
+        @media (max-width: 768px) {
+            .footer-content {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+
+            footer {
+                padding: 40px 20px 20px;
+            }
+        
+}
